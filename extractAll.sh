@@ -1,5 +1,6 @@
 # Directory containing GIF files
 TOP_DIR="."  # Replace with your input directory path.
+
 INPUT_DIR="$TOP_DIR/inputGifs"  # Replace with your input directory path
 
 ALL_OUTPUTS_DIR="$TOP_DIR/outputPngs"    
