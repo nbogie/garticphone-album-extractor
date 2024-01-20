@@ -2,7 +2,7 @@
 TOP_DIR="."  # Replace with your input directory path.
 INPUT_DIR="$TOP_DIR/inputGifs"  # Replace with your input directory path
 
-ALL_OUTPUTS_DIR="$TOP_DIR/outputs"    
+ALL_OUTPUTS_DIR="$TOP_DIR/outputPngs"    
 rm -rf "$ALL_OUTPUTS_DIR"
 mkdir -p "$ALL_OUTPUTS_DIR"
     
