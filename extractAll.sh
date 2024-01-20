@@ -1,8 +1,9 @@
+TOP_DIR="."  # Replace with your top directory path that contains subdirs inputGifs/ and outputPngs/
+
 # Directory containing GIF files
-TOP_DIR="."  # Replace with your input directory path.
+INPUT_DIR="$TOP_DIR/inputGifs"
 
-INPUT_DIR="$TOP_DIR/inputGifs"  # Replace with your input directory path
-
+# Directory into which output subdirectories will be created, one per input gif
 ALL_OUTPUTS_DIR="$TOP_DIR/outputPngs"    
 rm -rf "$ALL_OUTPUTS_DIR"
 mkdir -p "$ALL_OUTPUTS_DIR"
