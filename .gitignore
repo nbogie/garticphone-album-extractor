@@ -1,5 +1,7 @@
-inputGifs/
+inputGifs/*.gif
+!outputPngs/output_subdirs_will_appear_here.txt
 outputPngs/
+
 
 # Logs
 logs
