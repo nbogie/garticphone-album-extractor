@@ -21,10 +21,14 @@ for gif in "$INPUT_DIR"/*.gif; do
     rm -rf "$OUTPUT_DIR"
     mkdir -p "$OUTPUT_DIR"
     
-    # still playing with this.  gartic doesn't seem reliable about N frames for each image.
-    ffmpeg -i "$gif" -vf "select='not(mod(n,1))',setpts='N/(FRAME_RATE*TB)'" "$OUTPUT_DIR/${filename}_%03d.png"
+    # still playing with this. export the image when it changes
+    ffmpeg -i "$gif" -vf "mpdecimate,setpts=N/FRAME_RATE/TB" -vsync vfr "$OUTPUT_DIR/${filename}_%03d.png"
+    
+    #just export all frames
+    # ffmpeg -i "$gif" -vsync vfr "$OUTPUT_DIR/${filename}_%03d.png"
 
-    # ChatGPT suggested this for extract every 4th frame, but doesn't work for some books at 10 pages.
+    # 
+    # ChatGPT suggested this when i asked it to extract every 4th frame, but doesn't work for some books at 10 pages.
     # ffmpeg -i "$gif" -vf "select='not(mod(n,4))',setpts='N/(FRAME_RATE*TB)'" -vsync vfr "$OUTPUT_DIR/${filename}_%03d.png"
     
 done
