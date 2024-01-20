@@ -7,7 +7,7 @@ Not intended for public consumption.
 ## warning - use at your own risk
 
 The scripts contained run the `rm` command on certain computed paths.
-It's not impossible it deletes every file on your system.
+It's not impossible it deletes every file on your system, if there's a mistake in this code.
 
 I suggest running it on a virtual machine / gitpod.io / github codespace.
 
