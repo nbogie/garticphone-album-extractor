@@ -11,6 +11,17 @@ It's not impossible it deletes every file on your system, if there's a mistake i
 
 I suggest running it on a virtual machine / gitpod.io / github codespace.
 
+## installing
+
+no install is necessary, assuming you have ffmpeg on your system.  if you don't you'll probably have to research that yourself.
+
+Here's what worked for me on ubuntu systems.
+
+```
+sudo apt-get -y update
+sudo apt-get install -y ffmpeg
+```
+
 ## how it works
 
 the bash script `extractAll.sh` just wraps `ffmpeg` which does all the hard work
